@@ -1,8 +1,16 @@
 import React from 'react';
+import less from 'less';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  function handleChange() {
+    console.log(66666);
+    less.modifyVars({
+      '@primary-color': 'red'
+   });
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +26,9 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleChange}>
+        Click me
+      </button>
       </header>
     </div>
   );
